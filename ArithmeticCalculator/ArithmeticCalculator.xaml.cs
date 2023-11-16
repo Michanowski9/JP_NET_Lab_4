@@ -15,22 +15,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ArithmeticCalculator
+namespace Arithmetic
 {
 	/// <summary>
 	/// Interaction logic for UserControl1.xaml
 	/// </summary>
-	[Export(typeof(ICalculator))]
-	public partial class UserControl1 : UserControl, ICalculator
+	public partial class ArithmeticCalc : UserControl
 	{
-		public new string Name { get; set; } = "Arithmetic Calculator";
-		public UserControl1()
+		public ArithmeticCalc()
 		{
 			InitializeComponent();
-		}
-		public UserControl GetUserControl()
-		{
-			return this;
 		}
 		private void Calculate_OnClick(object sender, RoutedEventArgs e)
 		{

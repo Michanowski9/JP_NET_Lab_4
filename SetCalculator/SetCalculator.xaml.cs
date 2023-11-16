@@ -15,24 +15,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SetCalculator
+namespace Set
 {
 	/// <summary>
 	/// Interaction logic for UserControl1.xaml
 	/// </summary>
-	[Export(typeof(ICalculator))]
-	public partial class UserControl1 : UserControl, ICalculator
+	public partial class SetCalc : UserControl
 	{
-		public new string Name { get; set; } = "Set Calculator";
-		public UserControl1()
+		public SetCalc()
 		{
 			InitializeComponent();
 		}
-		public UserControl GetUserControl()
-		{
-			return this;
-		}
-
 		private void Calculate_OnClick(object sender, RoutedEventArgs e)
 		{
 			var set1 = FirstInput.Text.Split(" ");
